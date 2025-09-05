@@ -17,6 +17,8 @@ connectDB();
 // Middleware
 app.use(cors());
 app.use(express.json());
+//trust of vercel proxy server
+app.set("trust proxy", 1);
 
 // Rate Limiting
 const limiter = rateLimit({
